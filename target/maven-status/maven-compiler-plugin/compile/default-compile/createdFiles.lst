@@ -1,0 +1,6 @@
+br/com/banco/agencia/model/Titular.class
+br/com/banco/agencia/teste/Teste.class
+br/com/banco/agencia/factory/ConnectionFactory.class
+br/com/banco/agencia/dao/ContaDAO.class
+br/com/banco/agencia/model/Conta.class
+br/com/banco/agencia/dao/TitularDAO.class

@@ -19,8 +19,10 @@ public class Teste {
 
         Titular t2 = new Titular(2,"Matheus", "49191139966", "Claudineia");
 
-        Conta c1 = new Conta(5, 7777,777,777.77);
+        Conta c1 = new Conta(7, 1534,100,1000.00);
 
-        contaDAO.buscarPorNome("joao");
+        contaDAO.cadastrar(c1);
+        contaDAO.atualizar(c1);
+        contaDAO.buscarTodos();
     }
 }

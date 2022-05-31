@@ -36,7 +36,7 @@ public class ContaDAO {
     }
 
     public void atualizar(Conta conta) {
-        try (PreparedStatement statement = connection.prepareStatement("UPDATE CONTA C SET C.AGENCIA = ?, C.NUMERO = ?, SALDO = ? WHERE ID_TITULAR = ?")){
+        try (PreparedStatement statement = connection.prepareStatement("UPDATE CONTA C SET C.AGENCIA = ?, C.NUMERO = ?, SALDO = ? WHERE ID_CONTA = ?")){
             statement.setInt(1, conta.getAgencia());
             statement.setInt(2, conta.getNumero());
             statement.setDouble(3, conta.getSaldo());
