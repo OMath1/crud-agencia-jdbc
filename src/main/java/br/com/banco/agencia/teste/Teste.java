@@ -17,12 +17,16 @@ public class Teste {
         TitularDAO titularDAO = new TitularDAO(connection);
         ContaDAO contaDAO = new ContaDAO(connection);
 
-        Titular t2 = new Titular(2,"Matheus", "49191139966", "Claudineia");
+        Titular t2 = new Titular(2,"John", "49923464300", "Joana");
 
-        Conta c1 = new Conta(7, 1534,100,1000.00);
+        Conta c1 = new Conta(1000,111,1111.11);
 
-        contaDAO.cadastrar(c1);
-        contaDAO.atualizar(c1);
+//        contaDAO.cadastrar(c1);
+//        contaDAO.atualizar(c1);
+
+//        contaDAO.remove(11);
+
         contaDAO.buscarTodos();
+
     }
 }

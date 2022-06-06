@@ -1,15 +1,21 @@
 package br.com.banco.agencia.model;
 
+import lombok.*;
+
+@Getter
+@Setter
+@ToString
 public class Conta {
     private Integer idConta;
+
+    @ToString.Exclude
     private Titular idTitular;
     private Integer agencia;
     private Integer numero;
     private Double saldo;
 
 
-    public Conta(Titular idTitular, Integer agencia, Integer numero, Double saldo) {
-        this.idTitular = idTitular;
+    public Conta(Integer agencia, Integer numero, Double saldo) {
         this.agencia = agencia;
         this.numero = numero;
         this.saldo = saldo;
@@ -21,59 +27,8 @@ public class Conta {
         this.numero = numero;
         this.saldo = saldo;
     }
+//    public void adicionar(Double valor) {
+//        this.setSaldo(this.saldo + valor);
+//    }
 
-    public Integer getIdConta() {
-        return idConta;
-    }
-
-    public void setIdConta(Integer idConta) {
-        this.idConta = idConta;
-    }
-
-    public Titular getIdTitular() {
-        return idTitular;
-    }
-
-    public void setIdTitular(Titular idTitular) {
-        this.idTitular = idTitular;
-    }
-
-    public Integer getAgencia() {
-        return agencia;
-    }
-
-    public void setAgencia(Integer agencia) {
-        this.agencia = agencia;
-    }
-
-    public Integer getNumero() {
-        return numero;
-    }
-
-    public void setNumero(Integer numero) {
-        this.numero = numero;
-    }
-
-    public Double getSaldo() {
-        return saldo;
-    }
-
-    public void setSaldo(Double saldo) {
-        this.saldo = saldo;
-    }
-
-    public void adicional(Double valor) {
-        this.setSaldo(this.saldo + valor);
-    }
-
-    @Override
-    public String toString() {
-        return "Conta" +
-                "\n-----------------------" +
-                "\n idConta= " + idConta +
-                "\n idTitular= " + idTitular +
-                "\n agencia= " + agencia +
-                "\n numero= " + numero +
-                "\n saldo= " + saldo;
-    }
 }
